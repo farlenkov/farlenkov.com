@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="
+        width=device-width,
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        minimum-scale=1.0,
+        user-scalable=no" />
+
+    <title>Mike Farlenkov - Indie Game Developer</title>
+
+    <style type="text/css" media="all">
+
+        *, *:before, *:after {
+
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html, body { min-height: 100%; }
+
+        body {
+
+            /*text-shadow: 1px 1px 0 #FFFFFF;*/
+            background: black;
+            color: white;
+            padding: 2em;
+            margin: 0;
+            text-align: center;
+        }
+
+        body, h1, h2, h3, .block-title  { font-family: 'Roboto', verdana, sans-serif; font-weight: 100; }
+        .page-wrap { max-width: 960px; margin: 0 auto; }
+
+        a { text-decoration: none; color: white; color1: #008dc8; }
+        a:hover { text-decoration: none; color: #ff8a00; }
+
+        .game {
+
+            display: inline-block;
+            width: 400px;
+            text-align: center;
+            margin: 1em;
+        }
+
+        .game-title {
+
+            font-size: 2.5em;
+        }
+
+        .game-desc {
+
+             font-size: 1.5em;
+         }
+
+         .game-img {
+
+              width: 400px;
+              height: 213px;
+          }
+
+        .slideshow {
+
+            width: 400px;
+            height: 213px;
+            position: relative;
+        }
+
+        .slideshow-item {
+
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            opacity: 0;
+            z-index: 0;
+        }
+
+        body > * { display: none !important; }
+        body > .farlenkov { display: block !important; }
+
+    </style>
+</head>
+<body>
+
+    <div class="farlenkov" style="max-width: 1200px; margin: 0 auto">
+        <div style="font-size: 4em; padding: 1em">
+            Games
+        </div>
+
+        <a class="game" href="scorched">
+            <!--<div class="game-img" style='background:url("/docs/assets/images/scorched/scorched.png")'></div>-->
+            <div class="slideshow">
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/scorched/slide-01.png');"></div>
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/scorched/slide-02.png');"></div>
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/scorched/slide-03.png');"></div>
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/scorched/slide-04.png');"></div>
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/scorched/slide-05.png');"></div>
+            </div>
+            <div class="game-title">Scorched</div>
+            <div class="game-desc">PC, PS4, XBOX One</div>
+        </a>
+
+        <a class="game" href="hardcode">
+
+            <div class="slideshow">
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/hardcode/slide-pc-01.png');"></div>
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/hardcode/slide-pc-02.png');"></div>
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/hardcode/slide-pc-03.png');"></div>
+            </div>
+
+            <div class="game-title">HARDCODE</div>
+            <div class="game-desc">PC, Mac OS</div>
+        </a>
+
+        <a class="game" href="https://play.google.com/store/apps/details?id=com.farlenkov.vrtps">
+
+            <div class="slideshow">
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/hardcode/slide-vr-01.png');"></div>
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/hardcode/slide-vr-02.png');"></div>
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/hardcode/slide-vr-03.png');"></div>
+            </div>
+
+            <div class="game-title">HARDCODE VR</div>
+            <div class="game-desc">Android VR</div>
+        </a>
+
+        <a class="game" href="jump-vr">
+
+            <div class="slideshow">
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/jump/slide-vr-01.png');"></div>
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/jump/slide-vr-02.png');"></div>
+                <div class="slideshow-item" style="background-image: url('/docs/assets/images/jump/slide-vr-03.png');"></div>
+            </div>
+
+            <div class="game-title">Need for Jump</div>
+            <div class="game-desc">Android VR</div>
+        </a>
+    </div>
+
+</body>
+
+<script src="http://yandex.st/jquery/2.0.3/jquery.min.js"></script>
+
+<script>
+    $(function () {
+
+        setTimeout(function () {
+
+            $(".slideshow").each(function () {
+
+                var $items = $(this).find(".slideshow-item");
+                var index = 0;
+
+                var animate = function () {
+
+                    var $item = $($items[index]);
+
+                    if(index+1 < $items.length )
+                        index++;
+                    else
+                        index = 0;
+
+                    $item.animate({opacity:1}, 1000, function () {
+
+                        setTimeout(function () {
+
+                            $item.animate({opacity:0}, 1000, animate);
+
+                        }, 3500);
+                    });
+                };
+
+                animate();
+            });
+
+        }, 500);
+    });
+</script>
+
+<noscript>
+    <style type="text/css" media="all">
+        .slideshow .slideshow-item:nth-child(1) {
+            opacity: 1;
+        }
+    </style>
+</noscript>
+</html>

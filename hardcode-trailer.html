@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<head>
+    <title>HARDCODE VR: Mobile VR Shooter</title>
+
+    <meta name="description" content="Mobile VR Shooter for Google Cardboard, Daydream and Gear VR." />
+    <meta name="keywords" content="Virtual Reality VR Mobile Google Cardboard Gear GearVR Oculus Store">
+    <meta name="author" content="Mike Farlenkov">
+
+    <meta name="viewport" content="
+        width=device-width,
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        minimum-scale=1.0,
+        user-scalable=0" />
+
+    <link rel="shortcut icon" href="docs/assets/images/hardcode/hardcode-icon-05-01-512.png">
+    <link rel="image_src" href="docs/assets/images/hardcode/hardcode-icon-05-01-512.png" >
+
+    <style type="text/css" media="all">
+        /*! mediabox v1.1.2 | (c) 2016 Pedro Rogerio | https://github.com/pinceladasdaweb/mediabox */.mediabox-wrap{position:fixed;width:100%;height:100%;background-color:rgba(0,0,0,.8);top:0;left:0;opacity:0;z-index:999;-webkit-animation-duration:.5s;animation-duration:.5s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:mediabox;animation-name:mediabox}@-webkit-keyframes mediabox{0%{opacity:0}100%{opacity:1}}@keyframes mediabox{0%{opacity:0}100%{opacity:1}}.mediabox-content{max-width:853px;display:block;margin:0 auto;height:100%;position:relative}.mediabox-content iframe{max-width:100%!important;width:100%!important;display:block!important;height:480px!important;border:none!important;position:absolute;top:0;bottom:0;margin:auto 0}.mediabox-hide{-webkit-animation-duration:.5s;animation-duration:.5s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:mediaboxhide;animation-name:mediaboxhide}@-webkit-keyframes mediaboxhide{0%{opacity:1}100%{opacity:0}}@keyframes mediaboxhide{0%{opacity:1}100%{opacity:0}}.mediabox-close{position:absolute;top:0;cursor:pointer;bottom:528px;right:0;margin:auto 0;width:24px;height:24px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAMvSURBVHja7Js9aBRBFMd/d1lPY6FiJVjY+Fkoxl7wA1Q0prQRS6tgoZV2MWIRRVHUUq3U+JnESrS2sBXBzipREWMlATXwt8gFznC5nd15M7Nn8uC45nZnfr/dY96+N1uTxFKOOks8lgUU/H2t4tJqIQUcAiaBGeBymcECRgO4B/wBPgJ9zkdKcvkclfRL/8ZtSTXH40N+GpLGF8zth6Q9Lse7DHCsDXxVJLSDLyQhb4B+Sb/VOVJJ6ATfKqGvrIDjDvCpJLjAz8d0JwmLDTBQAD62hIakiYJzm5a021VAfwn4WBLKwLdK2JUnIJP0XX4RSoIP/Hy8W3jeepv1dL3nmjwI3DLOExrAU2DA8zwb8xKhGeCuwYQtJTSAZwbwAHdcEqFM0mPZhO/foSHppdFcrraby2IDV0FCcPi8PCClhCjwLplgCgkrDeGv5I3pcjViSogK7yogloTo8EUEhJaQBL6oAGsJ9yVtkrRD0qsU8JKolagKZ8AD4ETFymFXgPOAQpXE5mMWOAk86XZ4n6pwlSSUhvcti1dBghe8RV8gpYQRX3irxkgKCSPABV94y85QTAlm8NatsRgSTOGBUnmAS57w3KiA0Ro3gHOW8KEEAOwE3hvfXWubFauu6A6vCND07OmW9viq5vpsGT3AtRAN2XoA+BfAwQBiTweoNpMZw48BRwKuAoPN7zNVWwZjwAfpO9S7DN5cQmYAPw4cTvAsYPJ3qHcpvNmdUO9ieBMJZQT0AhMVgfeWUC8BP87cjjHfuA6sATY0c4c0EgpUUHslvTaq3l5aUL1N1oarAnxSCVWBTyYhJvyw41XJJI3GkpAH/yYyfHQJi01gdUL4qBKqCh9NQrtBx4wGvGi0XS6T9MhoTkN5AtZVDN5awlTePsGfwDfPjGwYGDKu3s4Cp4BRz/N8cskED0iaqciVt7wTvkra5roKlJEQGt5HwhdJ24vmAUUkDEV+VyCT9NBxbp/bXXnXTNBFQmz4IhI6wrs+C+zvICEVvIuEKUlbrZ4G97WRkBq+k4RJSVusd4ntlfSheVudrQh8q4SbmntH6K2kzSF3if1Xsfzq7LKAJR5/BwCdAQBJn4egPgAAAABJRU5ErkJggg==) no-repeat;background-size:24px 24px}.mediabox-close:hover{opacity:.5}@media all and (max-width:768px){.mediabox-content{max-width:90%}}@media all and (max-width:600px){.mediabox-content iframe{height:320px!important}.mediabox-close{bottom:362px}}@media all and (max-width:480px){.mediabox-content iframe{height:220px!important}.mediabox-close{bottom:262px}}
+    </style>
+
+    <style type="text/css" media="all">
+
+        /*http://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/*/
+
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Open Sans Light'), local('OpenSans-Light'), url(docs/assets/fonts/opensans-light.ttf);
+        }
+
+        html, body {
+
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+
+            font-family: 'Open Sans', sans-serif;
+            background-color: #000;
+            position: relative;
+
+            color: #fff;
+            text-align: center;
+            text-shadow: 0 0 20px #000;
+
+        }
+
+        body, h1, h2, h3 { font-weight: 300; }
+        a { color: #00cbff; text-decoration: none; }
+        a:hover { color: #ffd200; text-decoration: none; }
+
+        .download {
+
+            position: absolute;
+            bottom: 25%;
+            text-align: center;
+            width: 100%;
+            font-size: 1.5em
+        }
+
+       @media all and (max-width: 610px) {
+
+            body {
+
+                background-size: 150%;
+                background-position: center 35%;
+            }
+
+            .download {
+                bottom: 35%;
+            }
+        }
+
+        body > * { display: none !important; }
+        body > .hardcode { display: block !important; }
+
+    </style>
+
+</head>
+<body>
+
+<div class="hardcode">
+    <br><br><br>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/vSp5A_evar8?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+    <div style="position: absolute; bottom: 5%; text-align: center; width: 100%">
+        <a href="https://twitter.com/hardcode_vr">twitter</a> |
+        <a href="https://www.facebook.com/hardcodevr">facebook</a> |
+        <a href="https://vk.com/hardcode_vr">вконтакте</a> |
+        <a href="https://www.youtube.com/playlist?list=PLU8lv72680A9n7ulbxQJVxCooXrAw3gvH">youtube</a> |
+        <a href="https://groups.google.com/forum/#!forum/hardcode-vr">forum</a> |
+        <a href="jump-vr">jump</a>
+
+        <br>
+        <a href="http://farlenkov.com" style="color: #fff;">&copy; Mike Farlenkov</a>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    /*! mediabox v1.1.2 | (c) 2016 Pedro Rogerio | https://github.com/pinceladasdaweb/mediabox */
+    !function(e,t){"use strict";"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?module.exports=t():e.MediaBox=t()}(this,function(){"use strict";var e=function(t){return this&&this instanceof e?t?(this.selector=t instanceof NodeList?t:document.querySelectorAll(t),this.root=document.querySelector("body"),void this.run()):!1:new e(t)};return e.prototype={run:function(){Array.prototype.forEach.call(this.selector,function(e){e.addEventListener("click",function(t){t.preventDefault();var o=this.parseUrl(e.getAttribute("href"));this.render(o),this.events()}.bind(this),!1)}.bind(this)),this.root.addEventListener("keyup",function(e){27===(e.keyCode||e.which)&&this.close(this.root.querySelector(".mediabox-wrap"))}.bind(this),!1)},template:function(e,t){var o;for(o in t)t.hasOwnProperty(o)&&(e=e.replace(new RegExp("{"+o+"}","g"),t[o]));return e},parseUrl:function(e){var t,o={};return(t=e.match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/))?(o.provider="youtube",o.id=t[2]):(t=e.match(/https?:\/\/(?:www\.)?vimeo.com\/(?:channels\/|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|)(\d+)(?:$|\/|\?)/))?(o.provider="vimeo",o.id=t[3]):(o.provider="Unknown",o.id=""),o},render:function(e){var t,o;if("youtube"===e.provider)t="https://www.youtube.com/embed/"+e.id;else{if("vimeo"!==e.provider)throw new Error("Invalid video URL");t="https://player.vimeo.com/video/"+e.id}o=this.template('<div class="mediabox-wrap" role="dialog" aria-hidden="false"><div class="mediabox-content" role="document" tabindex="0"><span class="mediabox-close" aria-label="close"></span><iframe src="{embed}?autoplay=1" frameborder="0" allowfullscreen></iframe></div></div>',{embed:t}),this.root.insertAdjacentHTML("beforeend",o)},events:function(){var e=document.querySelector(".mediabox-wrap");e.addEventListener("click",function(t){(t.target&&"SPAN"===t.target.nodeName&&"mediabox-close"===t.target.className||"DIV"===t.target.nodeName&&"mediabox-wrap"===t.target.className)&&this.close(e)}.bind(this),!1)},close:function(e){if(null===e)return!0;var t=null;t&&clearTimeout(t),e.classList.add("mediabox-hide"),t=setTimeout(function(){var e=document.querySelector(".mediabox-wrap");null!==e&&this.root.removeChild(e)}.bind(this),500)}},e});
+
+
+//    MediaBox('.download');
+</script>
+
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44368819 = new Ya.Metrika({ id:44368819, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44368819" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>

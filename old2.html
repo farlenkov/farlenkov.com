@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Михаил Фарленков - веб-разработчик</title>
+
+    <meta name="description" content="Михаил Фарленков. Веб-разработчик. Москва." />
+    <meta name="keywords"
+        content="разработка сайтов создание посадочных страниц веб-дизайн html html5 css css3 js javascript node.js mongodb wordpress" />
+    <link rel="shortcut icon" href="/docs/assets/images/avatar_64.png" type="image/x-icon" />
+    <link rel="icon" href="/docs/assets/images/avatar_64.png" type="image/x-icon" />
+    <link href="/docs/assets/images/avatar_64.png" rel="image_src">
+
+    <meta charset="utf-8">
+
+
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Open Sans Light'), local('OpenSans-Light'), url(/docs/assets/fonts/opensans-light.ttf);
+        }
+
+        @font-face {
+
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 100;
+            src: local('Roboto Thin'), local('Roboto-Thin'), url(/docs/assets/fonts/roboto-thin.ttf);
+        }
+
+        html,
+        body {
+            font-size: medium;
+            padding: 0;
+            margin: 0;
+        }
+
+        body,
+        h1,
+        h2,
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0c77b5;
+        }
+
+        a:hover {
+            color: #ff8a00;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0
+        }
+
+        .page-wrap {
+            max-width: 960px;
+            margin: 0 auto;
+            text-align: center;
+            vertical-align: text-top
+        }
+
+        .roboto {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 100;
+        }
+
+        .foot {
+            text-align: center;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+
+        #tumblr_controls,
+        #tumblr_teaser_follow {
+            display: none !important;
+        }
+
+        .cover {
+
+            background-size: cover;
+            background-position: 49% 50%;
+            background-repeat: no-repeat no-repeat;
+        }
+    </style>
+
+    <style type="text/css">
+        .head {
+
+            margin-bottom: 1.5em;
+            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1) inset;
+
+            background-color: #f2f2f2;
+            background-repeat: no-repeat;
+            background-position: top;
+            background: -webkit-gradient(radial, center center, 0, center center, 460, from(#fff), to(#dcdede));
+            background: -webkit-radial-gradient(center 0, circle, #fff, #dcdede);
+            background: -moz-radial-gradient(center 0, circle, #fff, #dcdede);
+            background: -ms-radial-gradient(circle, #fff, #dcdede);
+        }
+
+        body {
+            /*text-shadow: 1px 1px 0 #FFFFFF;*/
+        }
+
+        .welcome {
+            text-align: center;
+            font-size: medium;
+        }
+
+        .tabs {
+            text-align: center;
+            font-size: 1.5em;
+            color: #777;
+            margin-top: 2em;
+        }
+
+        .projects-tab,
+        .services-tab,
+        .contacts-tab {
+            display: inline-block;
+            padding: 0.2em 1em;
+            color: #777;
+        }
+
+        .projects-tab:hover,
+        .services-tab:hover,
+        .contacts-tab:hover {
+            /*background-color: #ddd; */
+            color: #20a1ec;
+            cursor: pointer;
+        }
+
+        .projects-tab.active,
+        .services-tab.active,
+        .contacts-tab.active {
+            background-color: #ffffff;
+            color: #777;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
+        }
+
+        .projects,
+        .services,
+        .contacts {
+            margin: 0 auto;
+            text-align: center
+        }
+
+        .project {
+            display: inline-block;
+            width: 450px;
+            vertical-align: top;
+            text-align: left;
+            padding: 2em;
+        }
+
+        .project-title {
+            font-size: 2em;
+            line-height: 1em;
+        }
+
+        .project-desc {
+            margin-top: 0.7em;
+            font-family: 'Open Sans', verdana;
+            line-height: 1.3em;
+            color: #555;
+        }
+
+        .project-link {
+            font-size: 1.5em;
+            margin-top: 0.3em;
+        }
+
+        .services {
+            max-width: 900px;
+        }
+
+        .service {
+            display: inline-block;
+            width: 250px;
+            height: 110px;
+            color: #555;
+            vertical-align: top;
+            text-align: left;
+            padding: 1.5em;
+            margin: 0.5em;
+            background-color: #f7f7f7;
+            border: 3px solid #f7f7f7;
+            position: relative;
+        }
+
+        .service-title {
+            font-size: 1.5em;
+            line-height: 1.2em;
+        }
+
+        .service-desc {
+            color: #777;
+            font-size: 0.9em;
+            margin-top: 1em;
+        }
+
+        a.service:hover {
+            background-color: #fff;
+        }
+
+        .contacts {
+            max-width: 900px;
+        }
+
+        .contact {
+            /*box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05) inset;*/
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            color: #555;
+            vertical-align: top;
+            text-align: left;
+            padding: 1.5em;
+            margin: 0.5em;
+            background-color: #f7f7f7;
+            border: 3px solid #f7f7f7;
+        }
+
+        .contact-title {
+            display: block;
+            font-size: 1.5em;
+            line-height: 1.2em;
+        }
+
+        .contact-link {
+            display: block;
+            color: #20a1ec;
+        }
+
+        .contact:hover {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=166837386839436";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+-->
+
+
+    <div class="head" style="padding-top: 50px; background-color: #eee;overflow: hidden;">
+
+        <div style="" class="welcome roboto">
+            <div style="font-size: 3em;color: #20a1ec">Михаил Фарленков</div>
+            <div style="font-size: 3em; line-height: 0.9em; margin-top: -0.2em; color: #777">веб-разработчик</div>
+        </div>
+
+        <div class="tabs">
+            <a href="#!/projects" class="projects-tab active">Проекты</a>
+            <a href="#!/services" class="services-tab">Услуги</a>
+            <a href="#!/contacts" class="contacts-tab">Контакты</a>
+        </div>
+    </div>
+
+    <div class="projects">
+
+        <div class="project">
+            <div class="project-title">Сервис деловых знакомств BizContacts.net</div>
+            <div class="project-desc">
+                Мобильный веб-сервис помогающий находить полезные знакомства на
+                деловых мероприятиях, обмениваться электронными визитками и
+                поддерживать связь после завершения мероприятий.
+            </div>
+            <div class="project-link"><a href="http://bizcontacts.net" target="_blank">http://bizcontacts.net</a></div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Мобильное приложение "Connections"</div>
+            <div class="project-desc">
+                Мобильное приложение для удобного управления деловыми связями на платвормах iOS и Android.
+                Мы хотим создать инструмент, который поможет вам раскрыть весь потенциал ваших связей.
+            </div>
+            <div class="project-link"><a href="http://cnts.me" target="_blank">http://cnts.me</a></div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Календари мероприятий</div>
+            <div class="project-desc">
+                Сервис, который может автоматически наполнять календари ваших
+                мобильных устройств или Google-календари мероприятиями интересных
+                вам организаторов чтобы вы всегда были в курсе того, что у них происходит.
+            </div>
+            <div class="project-link">
+                <a href="http://bizcontacts.net/app/ical" target="_blank">
+                    http://bizcontacts.net/app/ical
+                </a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Страница об услугах для<br>образовательных проектов</div>
+            <div class="project-desc">
+                Уже почти 2 года регулярно общаюсь людьми развивающими различные образовательные проекты и
+                на базе этого опыта предлагаю услуги разработки сайтов с учетом особенностей данной категории бизнеса
+            </div>
+            <div class="project-link"><a href="http://farlenkov.com/edu" target="_blank">http://farlenkov.com/edu</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Блог коммуникабельного<br>интроверта</div>
+            <div class="project-desc">
+                В целях развития графоманских навыков завел себе блог, в котором периодически стараюсь
+                писать о своих проектах, о своем опыте, о нетворкинге и т.д.
+            </div>
+            <div class="project-link"><a href="http://blog.farlenkov.com" target="_blank">http://blog.farlenkov.com</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Sales Fighting Online</div>
+            <div class="project-desc">
+                Симулятор прямых продаж - деловая социальная онлайн игра. Очень мощный инструмент для нетворкинга.
+                Разрабатываем совместно с коллегами из Moko Sales Co-working.
+            </div>
+            <div class="project-link"><a href="http://sf.bizco.me" target="_blank">http://sf.bizco.me</a></div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Персональный сайт<br>Константина Дубровина</div>
+            <div class="project-desc">
+                Константин Дубровин - эксперт в области создания отделов продаж,
+                управляющий партнер компании Moko Consulting,
+                бизнес-тренер, коуч продающего персонала, автор технологии ответного маркетинга.
+            </div>
+            <div class="project-link"><a href="http://dubrovin.moko.pro/" target="_blank">http://dubrovin.moko.pro</a>
+            </div>
+            <div class="project-disclaimer">(готовится к запуску)</div>
+        </div>
+
+
+
+        <div class="project">
+            <div class="project-title">Первая версия моего персонального сайта</div>
+            <div class="project-desc">
+                Сохранил на память прежнюю версию этого сайта.
+                Тогда 29го марта я еще слабо понимал зачем он мне нужен :)
+            </div>
+            <div class="project-link"><a href="http://farlenkov.com/old" target="_blank">
+                    http://farlenkov.com/old
+                </a></div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Фото и видео-студия 5D Production</div>
+            <div class="project-desc">
+                В далеком 2008 году закончил режиссерские курсы, закупил съемочное
+                оборудование и целых 2 года посвятил творческим профессиям так или
+                иначе связвнным с фото- и видео-производством. В память о тех
+                временах остался сайт-портфолио.
+            </div>
+            <div class="project-link"><a href="http://5dp.farlenkov.com" target="_blank">http://5d-pro.ru</a></div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Онлайн система управления проектами "Адванта"</div>
+            <div class="project-desc">
+                С 2004 по 2008 работал ведущим разработчиком в компании Адванта Групп.
+                Разработал с нуля самую крупную отечественую корпоративную систему
+                управления проектами, портфелями проектов и т.д.
+            </div>
+            <div class="project-link"><a href="http://advanta-group.ru" target="_blank">http://advanta-group.ru</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="services">
+
+        <a href="http://edu.farlenkov.com" class="service">
+            <div class="service-title">Создание сайтов для образовательных проектов</div>
+            <img style="width: 36px;height: 36px;position: absolute;right: 10px;bottom: 10px"
+                src="/docs/assets/images/common/arrow-right-gray.png">
+        </a>
+
+        <div class="service">
+            <div class="service-title">Создание сайтов для профессиональных сообществ</div>
+        </div>
+
+        <div class="service">
+            <div class="service-title">Создание сайтов для мероприятий</div>
+        </div>
+
+        <div class="service">
+            <div class="service-title">Создание сайтов для площадок<span style="color: #aaa">*</span></div>
+            <div class="service-desc">
+                *бизнес-инкубаторы, акселераторы,
+                коворкинги, антикафе и т.п.
+            </div>
+        </div>
+    </div>
+
+    <div class="contacts">
+
+        <div>
+            <a class="contact" href="mailto:mike@farlenkov.com">
+                <span class="contact-title">Почта</span>
+                <span class="contact-link">mike@farlenkov.com</span>
+            </a>
+
+            <a class="contact" href="skype:mikx_rus">
+                <span class="contact-title">Skype</span>
+                <span class="contact-link">mikx_rus</span>
+            </a>
+
+            <a class="contact" href="http://bizcontacts.net/farlenkov" target="_blank">
+                <span class="contact-title">BizContacts</span>
+                <span class="contact-link">farlenkov</span>
+            </a>
+
+            <a class="contact" href="https://www.facebook.com/mfarlenkov" target="_blank">
+                <span class="contact-title">Facebook</span>
+                <span class="contact-link">mfarlenkov</span>
+            </a>
+
+            <a class="contact" href="https://vk.com/mfarlenkov" target="_blank">
+                <span class="contact-title">ВКонтакте</span>
+                <span class="contact-link">mfarlenkov</span>
+            </a>
+
+            <a class="contact" href="http://www.linkedin.com/pub/mike-farlenkov/22/325/644" target="_blank">
+                <span class="contact-title">LinkedIn</span>
+                <span class="contact-link">mike-farlenkov</span>
+            </a>
+
+            <!--<a class="contact" href="https://twitter.com/farlenkov" target="_blank">
+            <span class="contact-title">Twitter</span>
+            <span class="contact-link">farlenkov</span>
+        </a>
+
+        <a class="contact" href="https://github.com/farlenkov" target="_blank">
+            <span class="contact-title">GitHub</span>
+            <span class="contact-link">farlenkov</span>
+        </a>
+
+        <a class="contact" href="https://angel.co/farlenkov" target="_blank">
+            <span class="contact-title">AngelList</span>
+            <span class="contact-link">farlenkov</span>
+        </a>-->
+        </div>
+
+        <div style="padding-top: 55px">
+            <div class='bizcontacts' data-type='person.profile' data-style='default'
+                data-uid='512be3e4fd2d4d2d4a000020'>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <!--<div style="display: inline-block;margin-bottom: 0.5em;">
+        <div class="fb-like" data-href="http://farlenkov.com" data-width="450" data-layout="button_count" data-show-faces="true" data-send="true"></div>
+    </div>-->
+        <div>
+            © 2013-2014 <a href="http://farlenkov.com">Михаил Фарленков</a>
+            <br>
+            Москва
+        </div>
+    </div>
+
+
+    <script src="http://yandex.st/jquery/2.0.3/jquery.min.js"></script>
+
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            $('.projects-tab').click(function () {
+
+                $('.tabs .active').removeClass('active');
+                $('.services').hide();
+                $('.contacts').hide();
+
+                $('.projects-tab').addClass('active');
+                $('.projects').show();
+            });
+
+            $('.services-tab').click(function () {
+
+                $('.tabs .active').removeClass('active');
+                $('.projects').hide();
+                $('.contacts').hide();
+
+                $('.services-tab').addClass('active');
+                $('.services').show();
+            });
+
+            $('.contacts-tab').click(function () {
+
+                $('.tabs .active').removeClass('active');
+                $('.projects').hide();
+                $('.services').hide();
+
+                $('.contacts-tab').addClass('active');
+                $('.contacts').show();
+            });
+
+            if (!location.hash) {
+
+                $('.projects-tab').trigger('click');
+                return;
+            }
+
+            switch (location.hash) {
+
+                case '#!/services':
+                    $('.services-tab').trigger('click');
+                    break;
+
+                case '#!/projects':
+                    $('.projects-tab').trigger('click');
+                    break;
+
+                default:
+                    $('.contacts-tab').trigger('click');
+                    break;
+            }
+        });
+
+    </script>
+
+
+    <script type="text/javascript" src="//bizcontacts.net/app/widget/widget.js" async="async"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<head>
+    <title>HARDCODE VR: Mobile VR Shooter</title>
+
+    <meta name="description" content="Mobile VR Shooter for Google Cardboard, Daydream and Gear VR." />
+    <meta name="keywords" content="Virtual Reality VR Mobile Google Cardboard Gear GearVR Oculus Store">
+    <meta name="author" content="Mike Farlenkov">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="
+        width=device-width,
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        minimum-scale=1.0,
+        user-scalable=0" />
+
+    <link rel="shortcut icon" href="docs/assets/images/hardcode/hardcode-icon-05-01-512.png">
+    <link rel="image_src" href="docs/assets/images/hardcode/hardcode-icon-05-01-512.png" >
+
+    <style type="text/css" media="all">
+
+        /*http://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/*/
+
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Open Sans Light'), local('OpenSans-Light'), url(docs/assets/fonts/opensans-light.ttf);
+        }
+
+        html, body {
+
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+
+            font-family: 'Open Sans', sans-serif;
+            background-color: #000;
+            position: relative;
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        .screen {
+
+            width: 100%;
+        }
+
+        .content {
+
+            margin: 0 auto;
+            padding: 0 1em;
+            max-width: 960px;
+        }
+
+        .block {
+
+            margin-top: 8em;
+        }
+
+        body, h1, h2, h3 { font-weight: 300; }
+        a { color: #00cbff; text-decoration: none; }
+        a:hover { color: #ffd200; text-decoration: none; }
+
+       @media all and (max-width: 610px) {
+
+        }
+
+        #tumblr_controls, #tumblr_teaser_follow, #cdx, .tmblr-iframe { display: none !important; }
+
+    </style>
+
+</head>
+<body>
+
+<div style="margin: 80px auto 80px auto; max-width: 480px">
+    <img style="width: 100%;" src="docs/assets/images/hardcode/title3-03.png">
+</div>
+
+<div class="content">
+
+    <h1>Общие сведения</h1>
+    <p>
+        HARDCODE VR: игра для мобильного VR на базе Google Cardboard и Gear VR.<br>
+        Начало разработки: август 2015 г.<br>
+        Публикация в Google Play: 19 октября 2015 г.<br>
+        Количество установок: 172602 (на 17.09.2016)<br>
+        Разработчик: Михаил Фарленков (<a href="https://www.facebook.com/mfarlenkov">fb</a>, <a href="https://vk.com/mfarlenkov">vk</a>, <a href="https://twitter.com/farlenkov">tw</a>)
+    </p>
+
+    <div class="block">
+
+        <p>
+            <img class="screen" src="docs/assets/images/hardcode/mixar-awards-01.png">
+        </p>
+
+        <h1>Игровой процесс</h1>
+        <p>
+            HARDCODE - это очень динамичный шутер включающий в себя как однопользовательские миссии,
+            в которых нужно уничтожать роботизированных противников, так и мультиплеерные режимы для
+            сражений с другими игроками в онлайне.
+        </p>
+        <p>
+            Игра ориентирована на хардкорную аудиторию и требует использования геймпада, что позволяет
+            получать игровой опыт "консольного" уровня на мобильных устройствах.
+        </p>
+
+    </div>
+    <div class="block">
+        <p>
+            <img class="screen" src="docs/assets/images/hardcode/mixar-awards-02.png">
+        </p>
+
+    <h1>Вид от третьего лица</h1>
+    <p>
+        Одной из главных особенностей игры является то, что она реализована в режиме от третьего лица.
+        На первый взгляд это противоречит самой идее виртуальной реальности, по которой мы должны сами
+        погружаться в нее и лично быть участниками событий, а не наблюдать за своим персонажем со стороны.
+    </p>
+    <p>
+        Но данная идея красивая на словах в действительности упирается в несовершенство технологий,
+        которые лежат в основе текущего поколения мобильного VR: динамичные игры с видом от первого
+        лица вызывают очень сильные болезненные ощущения практически у всех игроков. Поэтому разработчикам
+        игр приходится идти на различные компромиссы, в том числе в ущерб увлекательности игры.
+    </p>
+    <p>
+        Эксперименты над геймплеем с видом от третьего лица дали возможность создать игру с высокой
+        динамикой и практически без компромиссов по дизайну.
+    </p>
+
+    </div>
+
+    <div class="block">
+        <p>
+            <img class="screen" src="docs/assets/images/hardcode/mixar-awards-03.png">
+        </p>
+
+        <h1>Графика</h1>
+
+        <p>
+            Для игры был выбран максимально простой визуальный стиль
+            и были написаны максимально дешевые кастомные шейдеры,
+            что позволило достичь достаточно высокой производительности
+            на большинстве устройств и тем самым расширить аудиторию игры.
+        </p>
+
+        <p>
+            Со временем по ходу развития рынка мобильного VR и ростом
+            производительности мобильных устройств графика будет модернизирована.
+            Так же для турниров, которые часто проводятся с использованием Oculus Rift
+            есть созданы отдельные карты с графикой десктопного уровня.
+        </p>
+    </div>
+
+
+
+    <div class="block">
+
+    <p>
+        <img class="screen" src="docs/assets/images/hardcode/mixar-awards-04.png">
+    </p>
+
+    <h1>Киберспортивные турниры</h1>
+
+    <p>
+        Благодаря развитой core-механике и стабильному сетевому режиму игры, HARDCODE привлекает
+        внимание организаторов киберспортивных мероприятий. Так в 2016-ом году мы провели несколько
+        турниров совместно с компаниями Microsoft и MSI. Ближайший турнир запланирован на 29 сентября
+        и пройдет в рамках крупнейшей выставки интерактивных развлечений Игромир 2016.
+    </p>
+
+    </div>
+    <div class="block">
+
+
+    <p>
+        <img class="screen" src="docs/assets/images/hardcode/mixar-awards-05.png">
+    </p>
+
+    <h1>Продвижение</h1>
+
+    <p>
+        HARDCODE стабильно держится в топе поиска в Google Play по запросу "vr games".
+        При этом никакой специальной активности по ее продвижению не проводится и весь
+        рост аудитории можно считать органическим.
+    </p>
+    <p>
+        HARDCODE регулярно попадает в различные сборники "Top X games for VR" и т.п.
+        Все больше пользователей публикуют видео-обзоры на нее.
+        Иногда игру упоминают на страницах продажи VR-очков и геймпадов для Android.
+        Так же пользователи рекомендуют ее друг другу на форумах и т.п.
+    </p>
+
+    <p>
+        Недавно от Google пришло уведомление о грядущем фитчеринге HARDCODE на Google Play. Ждемс :)
+    </p>
+
+
+    </div>
+    <div class="block">
+
+
+    <h1>Трейлер игры</h1>
+
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/7gv1TD5hM9w" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+    <div class="block">
+
+    <h1>Видео с турнира: DevCon 2016</h1>
+
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/h84yulahgTA" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+    <div class="block">
+
+    <h1>Видео с турнира:  AR/VR GameDev Moscow</h1>
+
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/YzUsrXxxRkg" frameborder="0" allowfullscreen></iframe>
+
+    </div>
+    <div class="block">
+
+    <h1>Скриншоты мультиплеера</h1>
+
+    <p style="text-align: center">
+        <a href="https://pp.vk.me/c630224/v630224979/4116a/O5EyTL_9TWc.jpg"><img style="width: 250px; margin: 5px" src="https://pp.vk.me/c630224/v630224979/4116a/O5EyTL_9TWc.jpg"></a>
+        <a href="https://pp.vk.me/c630224/v630224979/4111a/PFTerTTLR6E.jpg"><img style="width: 250px; margin: 5px" src="https://pp.vk.me/c630224/v630224979/4111a/PFTerTTLR6E.jpg"></a>
+        <a href="https://pp.vk.me/c630224/v630224979/41124/7iSKEjHcPtw.jpg"><img style="width: 250px; margin: 5px" src="https://pp.vk.me/c630224/v630224979/41124/7iSKEjHcPtw.jpg"></a>
+        <a href="https://pp.vk.me/c630224/v630224979/4112e/3T5fVAd3GsM.jpg"><img style="width: 250px; margin: 5px" src="https://pp.vk.me/c630224/v630224979/4112e/3T5fVAd3GsM.jpg"></a>
+        <a href="https://pp.vk.me/c630224/v630224979/41138/xKbllb_mEe0.jpg"><img style="width: 250px; margin: 5px" src="https://pp.vk.me/c630224/v630224979/41138/xKbllb_mEe0.jpg"></a>
+        <!--<a href="https://pp.vk.me/c630224/v630224979/41142/O2Ezoa9cDhQ.jpg"><img style="width: 250px; margin: 5px" src="https://pp.vk.me/c630224/v630224979/41142/O2Ezoa9cDhQ.jpg"></a>-->
+        <a href="https://pp.vk.me/c630224/v630224979/4114c/bNzWivCjfJM.jpg"><img style="width: 250px; margin: 5px" src="https://pp.vk.me/c630224/v630224979/4114c/bNzWivCjfJM.jpg"></a>
+        <a href="https://pp.vk.me/c630224/v630224979/41156/NyhcUPNmKwc.jpg"><img style="width: 250px; margin: 5px" src="https://pp.vk.me/c630224/v630224979/41156/NyhcUPNmKwc.jpg"></a>
+        <a href="https://pp.vk.me/c630224/v630224979/41160/ylghZ6m1aAs.jpg"><img style="width: 250px; margin: 5px" src="https://pp.vk.me/c630224/v630224979/41160/ylghZ6m1aAs.jpg"></a>
+        <a href="https://pp.vk.me/c630224/v630224979/41174/m9sK9POxook.jpg"><img style="width: 250px; margin: 5px" src="https://pp.vk.me/c630224/v630224979/41174/m9sK9POxook.jpg"></a>
+
+    </p>
+    </div>
+</div>
+
+
+<div style="text-align: center; width: 100%; margin: 2em 0">
+    <a href="/">home</a> |
+    <a href="https://play.google.com/store/apps/details?id=com.farlenkov.vrtps">download</a> |
+    <a href="https://twitter.com/hardcode_vr">twitter</a> |
+    <a href="https://www.youtube.com/playlist?list=PLU8lv72680A9n7ulbxQJVxCooXrAw3gvH">youtube</a> |
+    <a href="https://groups.google.com/forum/#!forum/hardcode-vr">groups</a> |
+    <a href="jump-vr">jump</a>
+
+    <br>
+    <a href="http://farlenkov.com/games" style="color: #fff;">&copy; Mike Farlenkov</a>
+</div>
+
+</body>
+</html>

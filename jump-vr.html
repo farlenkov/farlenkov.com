@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Need for Jump (VR Game)</title>
+
+    <meta name="description" content="Mobile VR Game for Google Cardboard, Daydream and Gear VR." />
+    <meta name="keywords" content="Virtual Reality VR Mobile Google Cardboard Gear GearVR Oculus Store">
+    <meta name="author" content="Mike Farlenkov">
+
+    <meta name="viewport" content="
+        width=device-width,
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        minimum-scale=1.0,
+        user-scalable=0" />
+
+    <link rel="shortcut icon" href="docs/assets/images/jump/jump-icon-02-200.png">
+    <link rel="image_src" href="docs/assets/images/jump/jump-icon-02-200.png" >
+    <link href="https://fonts.googleapis.com/css?family=Chelsea+Market" rel="stylesheet">
+
+    <style type="text/css" media="all">
+
+        /*http://tympanus.net/codrops/2012/01/02/fullscreen-background-image-slideshow-with-css3/*/
+
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: local('Open Sans Light'), local('OpenSans-Light'), url(docs/assets/fonts/opensans-light.ttf);
+        }
+
+        html, body {
+
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+
+            /*font-family: 'Open Sans', sans-serif;*/
+            font-family: 'Chelsea Market', cursive;
+            background-color: #000;
+            position: relative;
+
+            color: #fff;
+            text-align: center;
+
+            /*text-shadow: 2px 2px 0 #000;*/
+            /*text-shadow: -2px -2px 0 #000;*/
+
+            background-image: url('docs/assets/images/jump/background.png');
+            background-size: 512px;
+            background-position: center center;
+            background-repeat: repeat;
+        }
+
+        body, h1, h2, h3 { font-weight: 300; }
+        a { color: #00cbff; text-decoration: none; }
+        a:hover { color: #ffd200; text-decoration: none; }
+
+        .download {
+
+            position: absolute;
+            bottom: 25%;
+            text-align: center;
+            width: 100%;
+            font-size: 1.5em
+        }
+
+        .center {
+
+            position: absolute;
+            top: 35%;
+            text-align: center;
+            width: 100%;
+            font-size: 1.5em
+        }
+
+        .outline1 {
+
+            text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        }
+
+        .outline2 {
+
+            text-shadow:
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            2px 2px 0 #000;
+        }
+
+        .outline3 {
+
+            text-shadow:
+            -3px -3px 0 #000,
+            3px -3px 0 #000,
+            -3px 3px 0 #000,
+            3px 3px 0 #000;
+        }
+
+       @media all and (max-width: 610px) {
+
+            body {
+
+                background-size: 150%;
+                background-position: center 35%;
+            }
+
+            .download {
+                bottom: 35%;
+            }
+        }
+
+        body > * { display: none !important; }
+        body > .jumper { display: block !important; }
+
+    </style>
+
+</head>
+<body>
+
+<div class="jumper">
+    <div class="center outline3">
+        <div style="font-size: 4em;color: #fff123;">Need for Jump</div>
+        <div style="font-size: 1.8em">mobile vr game for your party</div>
+        <br>
+        <a href="https://play.google.com/store/apps/details?id=com.farlenkov.jmpr">DOWNLOAD</a>
+    </div>
+
+    <div class="outline2" style="position: absolute; bottom: 5%; text-align: center; width: 100%;font-size: 1.5em">
+        <a href="https://twitter.com/farlenkov">twitter</a> |
+        <!--<a href="https://www.youtube.com/playlist?list=PLU8lv72680A8DI4oq7PCXIg8gunlNl-Iw">youtube</a> |-->
+        <a href="https://groups.google.com/forum/#!forum/need-for-jump-vr">groups</a> |
+        <a href="hardcode">hardcode</a>
+
+        <br>
+        <a href="http://farlenkov.com" style="color: #fff;">&copy; Mike Farlenkov</a>
+    </div>
+</div>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter44368879 = new Ya.Metrika({ id:44368879, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/44368879" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
