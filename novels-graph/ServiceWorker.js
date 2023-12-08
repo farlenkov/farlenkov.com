@@ -1,9 +1,9 @@
-const cacheName = "DefaultCompany-Online VN Graph-0.0.33.de7e74c";
+const cacheName = "DefaultCompany-Online VN Graph-0.0.35.6b94201";
 const contentToCache = [
     "Build/web-graph.loader.js",
-    "Build/web-graph.framework.js",
-    "Build/web-graph.data",
-    "Build/web-graph.wasm",
+    "Build/3fce9ef5e3ce8f1f69347b60ba53a11d.js",
+    "Build/c44c7b72a3619a649802fc81040c57b0.data",
+    "Build/3d04dc85d6aa4e21c78c2fec0038c2ea.wasm",
     "TemplateData/style.css"
 
 ];
