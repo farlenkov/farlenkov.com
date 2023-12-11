@@ -1,9 +1,9 @@
-const cacheName = "DefaultCompany-Online VN Graph-0.0.39.7461de2";
+const cacheName = "DefaultCompany-Novels Graph-0.1";
 const contentToCache = [
     "Build/web-graph.loader.js",
-    "Build/c6697ba14e0dc3be62afc3aa5ab9b2e8.js",
-    "Build/f6161c30a27d4a22f97ae6bddae00568.data",
-    "Build/e53d5ba612f6e4d80be737b8c7f4eee3.wasm",
+    "Build/f1a831ca77906c174df7e822f2a99b64.js",
+    "Build/93cf1776c610e8899c1612957655feb6.data",
+    "Build/62140748c66c0b9ed22bfb97414123f8.wasm",
     "TemplateData/style.css"
 
 ];

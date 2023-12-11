@@ -1,6 +1,6 @@
 {
-    "name": "Online VN Graph",
-    "short_name": "Online VN Graph",
+    "name": "Novels Graph",
+    "short_name": "Novels Graph",
     "start_url": "index.html",
     "display": "fullscreen",
     "background_color": "#231F20",
